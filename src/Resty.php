@@ -152,10 +152,10 @@ class Resty
      */
     public function __construct($opts = null)
     {
-        if (!empty($opts['onRequestLog']) && ($opts['onRequestLog'] instanceof Closure)) {
+        if (!empty($opts['onRequestLog']) && ($opts['onRequestLog'] instanceof \Closure)) {
             $this->callbacks['onRequestLog'] = $opts['onRequestLog'];
         }
-        if (!empty($opts['onResponseLog']) && ($opts['onResponseLog'] instanceof Closure)) {
+        if (!empty($opts['onResponseLog']) && ($opts['onResponseLog'] instanceof \Closure)) {
             $this->callbacks['onResponseLog'] = $opts['onResponseLog'];
         }
         if (isset($opts['silence_fopen_warning'])) {
